@@ -1100,6 +1100,10 @@ function _p9k_python_version() {
 # Anaconda Environment
 prompt_anaconda() {
   local p=${CONDA_PREFIX:-$CONDA_ENV_PATH}
+  [[ -n $p ]] || return
+  if [[ ${${p:t}//\%/%%} == ".miniconda3" ]]; then
+    p="base"
+  fi
   local msg=''
   if (( _POWERLEVEL9K_ANACONDA_SHOW_PYTHON_VERSION )) && _p9k_python_version; then
     msg="${_p9k__ret//\%//%%} "

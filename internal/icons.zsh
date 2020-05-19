@@ -1,8 +1,8 @@
 typeset -gA icons
 
 function _p9k_init_icons() {
-  [[ $+_p9k__icon_mode == 1 && $_p9k__icon_mode == $POWERLEVEL9K_MODE/$POWERLEVEL9K_LEGACY_ICON_SPACING ]] && return
-  typeset -g _p9k__icon_mode=$POWERLEVEL9K_MODE/$POWERLEVEL9K_LEGACY_ICON_SPACING
+  [[ $_p9k__icon_mode == $POWERLEVEL9K_MODE/$POWERLEVEL9K_LEGACY_ICON_SPACING/$POWERLEVEL9K_ICON_PADDING ]] && return
+  typeset -g _p9k__icon_mode=$POWERLEVEL9K_MODE/$POWERLEVEL9K_LEGACY_ICON_SPACING/$POWERLEVEL9K_ICON_PADDING
 
   if [[ $POWERLEVEL9K_LEGACY_ICON_SPACING == true ]]; then
     local s=
@@ -103,8 +103,10 @@ function _p9k_init_icons() {
         PYTHON_ICON                    '\uE63C'$s             #  (doesn't always work)
         SWIFT_ICON                     'Swift'
         GO_ICON                        'Go'
+        GOLANG_ICON                    'Go'
         PUBLIC_IP_ICON                 'IP'
         LOCK_ICON                      '\UE138'               # 
+        NORDVPN_ICON                   '\UE138'               # 
         EXECUTION_TIME_ICON            '\UE89C'$s             # 
         SSH_ICON                       'ssh'
         VPN_ICON                       '\UE138'
@@ -118,7 +120,7 @@ function _p9k_init_icons() {
         MIDNIGHT_COMMANDER_ICON        'mc'
         VIM_ICON                       'vim'
         TERRAFORM_ICON                 'tf'
-        PROXY_ICON                     '\u2B82'               # ⮂
+        PROXY_ICON                     '\u2194'               # ↔
         DOTNET_ICON                    '.NET'
         DOTNET_CORE_ICON               '.NET'
         AZURE_ICON                     '\u2601'               # ☁
@@ -136,6 +138,8 @@ function _p9k_init_icons() {
         ELIXIR_ICON                    'elixir'
         POSTGRES_ICON                  'postgres'
         PHP_ICON                       'php'
+        HASKELL_ICON                   'hs'
+        PACKAGE_ICON                   'pkg'
       )
     ;;
     'awesome-fontconfig')
@@ -224,8 +228,10 @@ function _p9k_init_icons() {
         PYTHON_ICON                    '\uE63C'$s             # 
         SWIFT_ICON                     'Swift'
         GO_ICON                        'Go'
+        GOLANG_ICON                    'Go'
         PUBLIC_IP_ICON                 'IP'
         LOCK_ICON                      '\UF023'               # 
+        NORDVPN_ICON                   '\UF023'               # 
         EXECUTION_TIME_ICON            '\uF253'$s             # 
         SSH_ICON                       'ssh'
         VPN_ICON                       '\uF023' 
@@ -239,7 +245,7 @@ function _p9k_init_icons() {
         MIDNIGHT_COMMANDER_ICON        'mc'
         VIM_ICON                       'vim'
         TERRAFORM_ICON                 'tf'
-        PROXY_ICON                     '\u2B82'               # ⮂
+        PROXY_ICON                     '\u2194'               # ↔
         DOTNET_ICON                    '.NET'
         DOTNET_CORE_ICON               '.NET'
         AZURE_ICON                     '\u2601'               # ☁
@@ -257,6 +263,8 @@ function _p9k_init_icons() {
         ELIXIR_ICON                    'elixir'
         POSTGRES_ICON                  'postgres'
         PHP_ICON                       'php'
+        HASKELL_ICON                   'hs'
+        PACKAGE_ICON                   'pkg'
       )
     ;;
     'awesome-mapped-fontconfig')
@@ -351,6 +359,7 @@ function _p9k_init_icons() {
         SWIFT_ICON                     '\uE655'$s                                     # 
         PUBLIC_IP_ICON                 "${CODEPOINT_OF_AWESOME_GLOBE:+\\u$CODEPOINT_OF_AWESOME_GLOBE$s}"
         LOCK_ICON                      "${CODEPOINT_OF_AWESOME_LOCK:+\\u$CODEPOINT_OF_AWESOME_LOCK}"
+        NORDVPN_ICON                   "${CODEPOINT_OF_AWESOME_LOCK:+\\u$CODEPOINT_OF_AWESOME_LOCK}"
         EXECUTION_TIME_ICON            "${CODEPOINT_OF_AWESOME_HOURGLASS_END:+\\u$CODEPOINT_OF_AWESOME_HOURGLASS_END$s}"
         SSH_ICON                       'ssh'
         VPN_ICON                       "${CODEPOINT_OF_AWESOME_LOCK:+\\u$CODEPOINT_OF_AWESOME_LOCK}"
@@ -364,7 +373,7 @@ function _p9k_init_icons() {
         MIDNIGHT_COMMANDER_ICON        'mc'
         VIM_ICON                       'vim'
         TERRAFORM_ICON                 'tf'
-        PROXY_ICON                     '\u2B82'                                       # ⮂
+        PROXY_ICON                     '\u2194'                                       # ↔
         DOTNET_ICON                    '.NET'
         DOTNET_CORE_ICON               '.NET'
         AZURE_ICON                     '\u2601'                                       # ☁
@@ -382,6 +391,8 @@ function _p9k_init_icons() {
         ELIXIR_ICON                    'elixir'
         POSTGRES_ICON                  'postgres'
         PHP_ICON                       'php'
+        HASKELL_ICON                   'hs'
+        PACKAGE_ICON                   'pkg'
       )
     ;;
     'nerdfont-complete'|'nerdfont-fontconfig')
@@ -471,8 +482,10 @@ function _p9k_init_icons() {
         PYTHON_ICON                    '\UE73C '              # 
         SWIFT_ICON                     '\uE755'               # 
         GO_ICON                        '\uE626'               # 
+        GOLANG_ICON                    '\uE626'               # 
         PUBLIC_IP_ICON                 '\UF0AC'$s             # 
         LOCK_ICON                      '\UF023'               # 
+        NORDVPN_ICON                   '\UF023'               # 
         EXECUTION_TIME_ICON            '\uF252'$s             # 
         SSH_ICON                       '\uF489'$s             # 
         VPN_ICON                       '\UF023'
@@ -486,7 +499,7 @@ function _p9k_init_icons() {
         MIDNIGHT_COMMANDER_ICON        'mc'
         VIM_ICON                       '\uE62B'               # 
         TERRAFORM_ICON                 '\uF1BB '              # 
-        PROXY_ICON                     '\u2B82'               # ⮂
+        PROXY_ICON                     '\u2194'               # ↔
         DOTNET_ICON                    '\uE77F'               # 
         DOTNET_CORE_ICON               '\uE77F'               # 
         AZURE_ICON                     '\uFD03'               # ﴃ
@@ -504,6 +517,131 @@ function _p9k_init_icons() {
         ELIXIR_ICON                    '\uE62D'               # 
         POSTGRES_ICON                  '\uE76E'               # 
         PHP_ICON                       '\uE608'               # 
+        HASKELL_ICON                   '\uE61F'               # 
+        PACKAGE_ICON                   '\uF8D6'               # 
+      )
+    ;;
+    ascii)
+      icons=(
+        RULER_CHAR                     '-'
+        LEFT_SEGMENT_SEPARATOR         ''
+        RIGHT_SEGMENT_SEPARATOR        ''
+        LEFT_SEGMENT_END_SEPARATOR     ' '
+        LEFT_SUBSEGMENT_SEPARATOR      '|'
+        RIGHT_SUBSEGMENT_SEPARATOR     '|'
+        CARRIAGE_RETURN_ICON           ''
+        ROOT_ICON                      '#'
+        SUDO_ICON                      ''
+        RUBY_ICON                      'rb'
+        AWS_ICON                       'aws'
+        AWS_EB_ICON                    'eb'
+        BACKGROUND_JOBS_ICON           '%%'
+        TEST_ICON                      ''
+        TODO_ICON                      'todo'
+        BATTERY_ICON                   'battery'
+        DISK_ICON                      'disk'
+        OK_ICON                        'ok'
+        FAIL_ICON                      'err'
+        SYMFONY_ICON                   'symphony'
+        NODE_ICON                      'node'
+        NODEJS_ICON                    'node'
+        MULTILINE_FIRST_PROMPT_PREFIX  ''
+        MULTILINE_NEWLINE_PROMPT_PREFIX ''
+        MULTILINE_LAST_PROMPT_PREFIX   ''
+        APPLE_ICON                     'mac'
+        WINDOWS_ICON                   'win'
+        FREEBSD_ICON                   'bsd'
+        ANDROID_ICON                   'android'
+        LINUX_ICON                     'linux'
+        LINUX_ARCH_ICON                'arch'
+        LINUX_DEBIAN_ICON              'debian'
+        LINUX_RASPBIAN_ICON            'pi'
+        LINUX_UBUNTU_ICON              'ubuntu'
+        LINUX_CENTOS_ICON              'centos'
+        LINUX_COREOS_ICON              'coreos'
+        LINUX_ELEMENTARY_ICON          'elementary'
+        LINUX_MINT_ICON                'mint'
+        LINUX_FEDORA_ICON              'fedora'
+        LINUX_GENTOO_ICON              'gentoo'
+        LINUX_MAGEIA_ICON              'mageia'
+        LINUX_NIXOS_ICON               'nixos'
+        LINUX_MANJARO_ICON             'manjaro'
+        LINUX_DEVUAN_ICON              'devuan'
+        LINUX_ALPINE_ICON              'alpine'
+        LINUX_AOSC_ICON                'aosc'
+        LINUX_OPENSUSE_ICON            'suse'
+        LINUX_SABAYON_ICON             'sabayon'
+        LINUX_SLACKWARE_ICON           'slack'
+        LINUX_VOID_ICON                'void'
+        SUNOS_ICON                     'sunos'
+        HOME_ICON                      ''
+        HOME_SUB_ICON                  ''
+        FOLDER_ICON                    ''
+        ETC_ICON                       ''
+        NETWORK_ICON                   'ip'
+        LOAD_ICON                      'cpu'
+        SWAP_ICON                      'swap'
+        RAM_ICON                       'ram'
+        SERVER_ICON                    ''
+        VCS_UNTRACKED_ICON             '?'
+        VCS_UNSTAGED_ICON              '!'
+        VCS_STAGED_ICON                '+'
+        VCS_STASH_ICON                 '#'
+        VCS_INCOMING_CHANGES_ICON      '<'
+        VCS_OUTGOING_CHANGES_ICON      '>'
+        VCS_TAG_ICON                   ''
+        VCS_BOOKMARK_ICON              '^'
+        VCS_COMMIT_ICON                '@'
+        VCS_BRANCH_ICON                ''
+        VCS_REMOTE_BRANCH_ICON         ':'
+        VCS_LOADING_ICON               ''
+        VCS_GIT_ICON                   ''
+        VCS_GIT_GITHUB_ICON            ''
+        VCS_GIT_BITBUCKET_ICON         ''
+        VCS_GIT_GITLAB_ICON            ''
+        VCS_HG_ICON                    ''
+        VCS_SVN_ICON                   ''
+        RUST_ICON                      'rust'
+        PYTHON_ICON                    'py'
+        SWIFT_ICON                     'swift'
+        GO_ICON                        'go'
+        GOLANG_ICON                    'go'
+        PUBLIC_IP_ICON                 'ip'
+        LOCK_ICON                      '!w'
+        NORDVPN_ICON                   'nordvpn'
+        EXECUTION_TIME_ICON            ''
+        SSH_ICON                       'ssh'
+        VPN_ICON                       'vpn'
+        KUBERNETES_ICON                'kube'
+        DROPBOX_ICON                   'dropbox'
+        DATE_ICON                      ''
+        TIME_ICON                      ''
+        JAVA_ICON                      'java'
+        LARAVEL_ICON                   ''
+        RANGER_ICON                    'ranger'
+        MIDNIGHT_COMMANDER_ICON        'mc'
+        VIM_ICON                       'vim'
+        TERRAFORM_ICON                 'tf'
+        PROXY_ICON                     'proxy'
+        DOTNET_ICON                    '.net'
+        DOTNET_CORE_ICON               '.net'
+        AZURE_ICON                     'az'
+        DIRENV_ICON                    'direnv'
+        FLUTTER_ICON                   'flutter'
+        GCLOUD_ICON                    'gcloud'
+        LUA_ICON                       'lua'
+        PERL_ICON                      'perl'
+        NNN_ICON                       'nnn'
+        TIMEWARRIOR_ICON               'tw'
+        TASKWARRIOR_ICON               'task'
+        NIX_SHELL_ICON                 'nix'
+        WIFI_ICON                      'wifi'
+        ERLANG_ICON                    'erlang'
+        ELIXIR_ICON                    'elixir'
+        POSTGRES_ICON                  'postgres'
+        PHP_ICON                       'php'
+        HASKELL_ICON                   'hs'
+        PACKAGE_ICON                   'pkg'
       )
     ;;
     *)
@@ -592,8 +730,10 @@ function _p9k_init_icons() {
         PYTHON_ICON                    'Py'
         SWIFT_ICON                     'Swift'
         GO_ICON                        'Go'
+        GOLANG_ICON                    'Go'
         PUBLIC_IP_ICON                 'IP'
-        LOCK_ICON                      '\UE0A2' 
+        LOCK_ICON                      '\UE0A2'
+        NORDVPN_ICON                   '\UE0A2'
         EXECUTION_TIME_ICON            ''
         SSH_ICON                       'ssh'
         VPN_ICON                       'vpn'
@@ -625,6 +765,8 @@ function _p9k_init_icons() {
         ELIXIR_ICON                    'elixir'
         POSTGRES_ICON                  'postgres'
         PHP_ICON                       'php'
+        HASKELL_ICON                   'hs'
+        PACKAGE_ICON                   'pkg'
       )
     ;;
   esac
@@ -643,6 +785,16 @@ function _p9k_init_icons() {
       icons[VCS_BRANCH_ICON]='@'
     ;;
   esac
+
+  if [[ $POWERLEVEL9K_ICON_PADDING == none && $POWERLEVEL9K_MODE != ascii ]]; then
+    icons=("${(@kv)icons%% #}")
+    icons[LEFT_SEGMENT_END_SEPARATOR]+=' '
+    icons[MULTILINE_LAST_PROMPT_PREFIX]+=' '
+    icons[VCS_TAG_ICON]+=' '
+    icons[VCS_COMMIT_ICON]+=' '
+    icons[VCS_BRANCH_ICON]+=' '
+    icons[VCS_REMOTE_BRANCH_ICON]+=' '
+  fi
 }
 
 # Sadly, this is a part of public API. Its use is emphatically discouraged.

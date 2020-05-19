@@ -20,10 +20,11 @@
 () {
   emulate -L zsh
 
-  autoload -Uz is-at-least && is-at-least 5.1 || return
-
   # Unset all configuration options.
-  unset -m 'POWERLEVEL9K_*'
+  unset -m 'POWERLEVEL9K_*|DEFAULT_USER'
+
+  # Zsh >= 5.1 is required.
+  autoload -Uz is-at-least && is-at-least 5.1 || return
 
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(prompt_char dir vcs)
@@ -102,6 +103,9 @@
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
   (( ! $+functions[p10k] )) || p10k reload
 }
+
+# Tell `p10k configure` which file it should overwrite.
+typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
